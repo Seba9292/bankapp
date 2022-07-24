@@ -35,6 +35,14 @@ public class AccDetails {
         balance = pieniadze + balance;
     }
 
+    public long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
     public void withdrawal() {
         System.out.println("Podaj kwote wyplaty");
         long kwotaWyplaty;
