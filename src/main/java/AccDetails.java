@@ -7,7 +7,7 @@ public class AccDetails {
     private long balance;
     Scanner scanner = new Scanner(System.in);
 
-    public void createAccount(){
+    public void createAccount() {
         System.out.println("Provide account name");
         name = scanner.next();
         System.out.println("Provide account number");
@@ -19,7 +19,8 @@ public class AccDetails {
 
 
     }
-    public void showAccount(){
+
+    public void showAccount() {
         System.out.println("Your account name is: " + name);
         System.out.println("Your account number is: " + accNumber);
         System.out.println("Your login is: " + login);
@@ -27,11 +28,25 @@ public class AccDetails {
 
     }
 
-    public void deposit(){
+    public void deposit() {
         System.out.println("Ile chesz wplacic");
         long pieniadze;
         pieniadze = scanner.nextLong();
         balance = pieniadze + balance;
+    }
+
+    public void withdrawal() {
+        System.out.println("Podaj kwote wyplaty");
+        long kwotaWyplaty;
+        kwotaWyplaty = scanner.nextLong();
+        if (balance < kwotaWyplaty) {
+            System.out.println("Brak wystarczajacych srodkow");
+
+        } else {
+            balance = balance - kwotaWyplaty;
+        }
+
+
     }
 
 }
