@@ -27,5 +27,11 @@ public class AccDetails {
 
     }
 
+    public void deposit(){
+        System.out.println("Ile chesz wplacic");
+        long pieniadze;
+        pieniadze = scanner.nextLong();
+        balance = pieniadze + balance;
+    }
 
 }

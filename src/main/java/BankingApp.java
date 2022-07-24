@@ -14,11 +14,13 @@ public class BankingApp {
                 case 1:
                     account.showAccount();
                     break;
+                case 2:
+                    account.deposit();
+                    break;
             }
         }
-                while (inputNumber != 4);
+        while (inputNumber != 4);
     }
-
 
 
 }
